@@ -5,27 +5,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import {HttpClientModule} from '@angular/common/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {Routes, RouterModule} from '@angular/router';
+import { UsersComponent } from './users/users.component';
 
 const appRoutes: Routes = [
-  // { path: '', component: HomeComponent},
-  // { path: 'about', component: AboutComponent},
-  // { path: '**', component: NotFoundComponent }
-  // { path: '**', component: NotFoundComponent }
-  // { path: '**', component: NotFoundComponent }
+    { path: 'login', component: AuthComponent},
+    { path: 'users', component: UsersComponent},
+    { path: '/', component: AppComponent},
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    AuthComponent
+    AuthComponent,
+    UsersComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
+      NgbModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgbModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

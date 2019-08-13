@@ -7,28 +7,29 @@ import {AuthService} from './auth.service';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent implements OnInit {
-
-  constructor(
+    public show = false;
+    constructor(
     private authService: AuthService,
     private router: Router
-  ) { }
+  ) {
+  }
+    toggleButton() {
+        this.show = !this.show;
+    }
+
+    vkLogin() {
+
+        this.authService.vkLogin()
+            .subscribe(res => {
+                    console.log('vkLogin');
+                }, (err) => {
+                    console.log(err);
+                }
+            );
+    }
 
   ngOnInit() {
-  }
-
-  initSession() {
-    this.authService.initSession();
-  }
-
-  vkLogin() {
-
-    this.authService.vkLogin2()
-      .subscribe(res => {
-          console.log('vkLogin');
-        }, (err) => {
-          console.log(err);
-        }
-      );
+      this.authService.initSession();
   }
 
 }

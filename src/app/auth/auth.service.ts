@@ -12,9 +12,7 @@ const httpOptions = {
 
 @Injectable({providedIn: 'root'})
 export class AuthService {
-
   public token = null;
-  public tmpSessionId = null;
 
   constructor(private http: HttpClient) {}
 
@@ -23,17 +21,26 @@ export class AuthService {
   }
 
   vkLogin(): Observable<any> {
-    return this.http.post('/auth/vk', this.tmpSessionId).pipe(map(this.extractData));
-  }
-  vkLogin2(): Observable<any> {
-    return this.http.post('/auth/vk', {tmpSessionId: this.tmpSessionId}).pipe(map(this.extractData));
+    const body = {tmpSessionId: localStorage.getItem('tmpSessionId')};
+    // return this.http.post('/auth/vk', body).pipe(map(this.extractData));
+    return this.http.post('/auth/vk', body).pipe(map(this.extractData));
   }
 
   initSession() {
-    this.http.get('/auth/initSession')
-      .subscribe(res => {
-        this.tmpSessionId = res;
-    });
+      if (!localStorage.getItem('tmpSessionId')) { // Запросим у бека временную сессию для авторизации
+          console.log('if')
+          this.http.get('/auth/session')
+              .subscribe((res: any) => {
+                  localStorage.setItem('tmpSessionId', res);
+          });
+      } else { // Токен уже есть, тогда спросим у бека - есть ли для нас постоянный токен
+          console.log('else')
+          this.http.get('/auth/session/' + localStorage.getItem('tmpSessionId'))
+              .subscribe(res => {
+                  localStorage.removeItem('tmpSessionId');
+              });
+      }
+
   }
 
 }
