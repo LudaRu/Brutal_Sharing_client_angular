@@ -27,7 +27,6 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
