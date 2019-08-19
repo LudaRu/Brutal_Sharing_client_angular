@@ -7,20 +7,15 @@ import { AuthComponent } from './auth/auth.component';
 import {HttpClientModule} from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
-import {Routes, RouterModule} from '@angular/router';
 import { UsersComponent } from './users/users.component';
-
-const appRoutes: Routes = [
-    { path: 'login', component: AuthComponent},
-    { path: 'users', component: UsersComponent},
-    { path: '/', component: AppComponent},
-];
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
-    UsersComponent
+    UsersComponent,
+    ProfileComponent,
   ],
   imports: [
       NgbModule,

@@ -28,11 +28,23 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/font-awesome/css/font-awesome.min.css",
+              {
+                "input": "src/themes/bootrap.scss",
+                "lazy": true,
+                "bundleName": "assets/bootrap"
+              }
             ],
-            "scripts": []
+            "scripts": [
+              "src/js/style-switcher.js",
+              "src/js/style-local-storage.js"
+            ]
           },
           "configurations": {
+            "dev": {
+              "extractCss": true
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -65,6 +77,9 @@
             "browserTarget": "BrutalSharing:build"
           },
           "configurations": {
+            "dev": {
+              "browserTarget": "BrutalSharing:build:dev"
+            },
             "production": {
               "browserTarget": "BrutalSharing:build:production"
             }
@@ -88,9 +103,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/font-awesome/css/",
+              {
+                "input": "src/themes/bootrap.scss",
+                "lazy": true,
+                "bundleName": "assets/bootrap"
+              }
             ],
-            "scripts": []
+            "scripts": [
+              "src/js/style-switcher.js",
+              "src/js/style-local-storage.js"
+            ]
           }
         },
         "lint": {

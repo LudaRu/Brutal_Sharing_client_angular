@@ -1,37 +1,39 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" routerLink="/">
-            <i class="fa fa-home"></i>
-        </a>
+<header class="container">
 
-        <button class="navbar-toggler" type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!--<nav class="nav">-->
+        <!--<a class="nav-link active" href="#">Active</a>-->
+        <!--<a class="nav-link" href="#">Link</a>-->
+        <!--<a class="nav-link" href="#">Link</a>-->
+        <!--<a class="nav-link disabled" href="#">Disabled</a>-->
+    <!--</nav>-->
 
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/users">users</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/login">login</a>
-                </li>
-            </ul>
-        </div>
+    <nav class="nav justify-content-center">
+        <a class="nav-link" routerLink="/profile">profile</a>
+        <a class="nav-link" routerLink="/users">users</a>
+        <a class="nav-link" routerLink="/login">login</a>
     </nav>
 </header>
-<main>
+
+<main class="container">
     <router-outlet></router-outlet>
 </main>
 
-<!--<footer class="footer">-->
-    <!--<div class="container">-->
-        <!--...-->
-    <!--</div>-->
-<!--</footer>-->
+<!--<div class="navbar-fixed-bottom row-fluid">-->
+<!--<div class="navbar-inner">-->
+<!--<div class="container">-->
+<!--asd-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<div class="footer2 bg-success">
+    <div class="container">
+        ...
+    </div>
+</div>
 
 <!--<div class="navbar-fixed-bottom row-fluid">-->
     <!--<div class="navbar-inner">-->
@@ -48,3 +50,4 @@
         <!--<a routerLink="/login">login</a>-->
     <!--</nav>-->
 <!--</footer>-->
+
