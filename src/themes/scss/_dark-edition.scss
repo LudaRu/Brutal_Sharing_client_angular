@@ -55,11 +55,7 @@
   // Animation Keyframe
   @import 'dark-edition/dark-heartbeat-animation';
 
-
-  // Modals
-  $modal-content-bg:               $dark-background !default;
-  .fff {
-    background: $dark-background;
-  }
+  // custom
+  @import 'dark-edition/dark-aa-custom';
 
 }

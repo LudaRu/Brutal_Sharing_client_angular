@@ -3,22 +3,18 @@
 
 <header class="container">
 
-    <!--<nav class="nav">-->
-        <!--<a class="nav-link active" href="#">Active</a>-->
-        <!--<a class="nav-link" href="#">Link</a>-->
-        <!--<a class="nav-link" href="#">Link</a>-->
-        <!--<a class="nav-link disabled" href="#">Disabled</a>-->
-    <!--</nav>-->
+  <!--<nav class="nav">-->
+  <!--<a class="nav-link active" href="#">Active</a>-->
+  <!--<a class="nav-link" href="#">Link</a>-->
+  <!--<a class="nav-link" href="#">Link</a>-->
+  <!--<a class="nav-link disabled" href="#">Disabled</a>-->
+  <!--</nav>-->
 
-    <nav class="nav justify-content-center">
-        <a class="nav-link" routerLink="/profile">profile</a>
-        <a class="nav-link" routerLink="/users">users</a>
-        <a class="nav-link" routerLink="/login">login</a>
-    </nav>
+
 </header>
 
 <main class="container">
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </main>
 
 <!--<div class="navbar-fixed-bottom row-fluid">-->
@@ -29,50 +25,61 @@
 <!--</div>-->
 <!--</div>-->
 
-<div class="bottom-nav">
-    <div class="container h-100">
-       <div class="row align-items-center h-100">
-           <div class="col text-center">
-               <a href="">
-                   <i class="fas fa-camera"></i>
-                   <small>фото</small>
-               </a>
-           </div>
-           <div class="col text-center">
-               <a href="">
-                   <i class="fas fa-address-book"></i>
-                   <small>меню</small>
-               </a>
-           </div>
-           <div class="col text-center">
-               <a href="">
-                   <i class="fas fa-table"></i>
-                   <small>профиль</small>
-               </a>
-           </div>
-           <div class="col text-center">
-               <a href="">
-                   <i class="fas fa-cogs"></i>
-                   <small>настройка</small>
-               </a>
-           </div>
-       </div>
+<footer class="bottom-nav pt-2 pb-2">
+  <div class="container h-100">
+    <div class="row align-items-center h-100">
+      <div class="col text-center">
+        <a href="">
+          <i class="fas fa-camera"></i>
+          <div><small>фото</small></div>
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="">
+          <i class="fas fa-cogs"></i>
+          <div><small>меню</small></div>
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="">
+          <i class="fas fa-table"></i>
+          <div><small>профиль</small></div>
+        </a>
+      </div>
+      <div class="col text-center">
+        <a routerLink="/profile">
+          <i class="fas fa-address-book"></i>
+
+          <div><small>профиль</small></div>
+        </a>
+      </div>
     </div>
-</div>
+  </div>
+</footer>
 
 <!--<div class="navbar-fixed-bottom row-fluid">-->
-    <!--<div class="navbar-inner">-->
-        <!--<div class="container">-->
-            <!--asd-->
-        <!--</div>-->
-    <!--</div>-->
+<!--<div class="navbar-inner">-->
+<!--<div class="container">-->
+<!--asd-->
+<!--</div>-->
+<!--</div>-->
 <!--</div>-->
 
 <!--<footer>-->
-    <!--<nav>-->
-        <!--<a routerLink="/">home</a>-->
-        <!--<a routerLink="/users">users</a>-->
-        <!--<a routerLink="/login">login</a>-->
-    <!--</nav>-->
+<!--<nav>-->
+<!--<a routerLink="/">home</a>-->
+<!--<a routerLink="/users">users</a>-->
+<!--<a routerLink="/login">login</a>-->
+<!--</nav>-->
 <!--</footer>-->
 
+
+<!--class ScrollService {-->
+<!--public onScroll$ = new Subject();-->
+<!--constructor() {-->
+<!--document.on('mousewheel DOMMouseScroll scroll', (event) => {-->
+<!--// bla bla-->
+<!--this.onScroll$.next({тут нужные цифры скрола});-->
+<!--})-->
+<!--}-->
+<!--  }-->
