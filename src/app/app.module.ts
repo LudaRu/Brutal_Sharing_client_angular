@@ -10,6 +10,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { UsersComponent } from './components/users/users.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import {WINDOW_PROVIDERS} from './services/window.service';
+import { FooterComponent } from './components/footer/footer.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -18,12 +20,14 @@ import {WINDOW_PROVIDERS} from './services/window.service';
     AuthComponent,
     UsersComponent,
     ProfileComponent,
+    FooterComponent,
   ],
   imports: [
       NgbModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+      ReactiveFormsModule,
   ],
   providers: [WINDOW_PROVIDERS],
   bootstrap: [AppComponent]

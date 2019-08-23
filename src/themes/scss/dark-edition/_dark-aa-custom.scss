@@ -1,9 +1,7 @@
 // dark
-
-.bottom-nav{
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: $card-color;
-  @include border-top-radius($border-radius-lg);
-}
+.bg-0 {background-color: $dark-background}
+.bg-1 {background-color: $sidebar-background}
+.bg-2 {}
+.bg-3 {}
+.bg-4 {}
+.bg-5 {}

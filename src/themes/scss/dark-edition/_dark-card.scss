@@ -1,5 +1,6 @@
 .card {
   background: $card-color;
+  color: $card-category-color;
 
   .card-header {
     &.card-header-text .card-title,

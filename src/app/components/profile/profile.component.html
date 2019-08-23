@@ -13,4 +13,21 @@
         </div>
     </div>
 
+    <div class="col-12">
+        <div class="card card-stats">
+            <div class="card-body">
+                <p>Тема</p>
+            </div>
+            <div class="card-footer">
+                <form [formGroup]="radioGroupForm">
+                    <input  type="radio" name="1" [value]="1"> Left (pre-checked)
+                    <input  type="radio" name="1" [value]="3"> Middle
+                    <input  type="radio" name="1" [value]="false"> Right
+                </form>
+                <hr>
+                <p>{{radioGroupForm.value['model']}}</p>
+            </div>
+        </div>
+    </div>
+
 </div>
