@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {CYRILLIC_PATTERN, EMAIL_PATTERN} from "../../reactive-form-components/constants/validation-patterns-list";
+import {ValidationService} from "../../reactive-form-components/services/validation.service";
 
 @Component({
   selector: 'app-profile',
@@ -10,14 +12,42 @@ export class ProfileComponent implements OnInit {
 
     public radioGroupForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+    feedbackForm: FormGroup = new FormGroup({
+        'userName': new FormControl(
+            null,
+            [Validators.required, Validators.pattern(CYRILLIC_PATTERN)]),
+        'userLastName': new FormControl(
+            null,
+            [Validators.required, Validators.pattern(CYRILLIC_PATTERN)]),
+        'userEmail': new FormControl(
+            null,
+            [Validators.required, Validators.pattern(EMAIL_PATTERN)])
+    });
+
+    seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
+
+
+    currentRate = 8;
+
+  constructor(
+      private formBuilder: FormBuilder,
+    private validationService: ValidationService,
+      ) {
 
   }
 
   ngOnInit() {
       this.radioGroupForm = this.formBuilder.group({
-          'model': 1
+          name: new FormControl('')
       });
   }
+
+    onSubmit(): void {
+        if (this.feedbackForm.valid) {
+            // Working on your validated form data
+        } else {
+            this.validationService.markAllFormFieldsAsTouched(this.feedbackForm);
+        }
+    }
 
 }

@@ -11,16 +11,24 @@ import { UsersComponent } from './components/users/users.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import {WINDOW_PROVIDERS} from './services/window.service';
 import { FooterComponent } from './components/footer/footer.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {ReactiveValidationComponent} from "./reactive-form-components/elements/reactive-validation/reactive-validation.component";
+import {ReactiveInputComponent} from "./reactive-form-components/elements/reactive-input/reactive-input.component";
+import { ReactiveSelectComponent } from './reactive-form-components/elements/reactive-select/reactive-select.component';
+import { ReactiveRadioComponent } from './reactive-form-components/elements/reactive-radio/reactive-radio.component';
 
 
 @NgModule({
   declarations: [
+      ReactiveValidationComponent,
+      ReactiveInputComponent,
     AppComponent,
     AuthComponent,
     UsersComponent,
     ProfileComponent,
     FooterComponent,
+    ReactiveSelectComponent,
+    ReactiveRadioComponent,
   ],
   imports: [
       NgbModule,
@@ -28,6 +36,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     AppRoutingModule,
     HttpClientModule,
       ReactiveFormsModule,
+      FormsModule,
   ],
   providers: [WINDOW_PROVIDERS],
   bootstrap: [AppComponent]

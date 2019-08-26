@@ -1,0 +1,8 @@
+<ng-container *ngFor="let item of itemsList">
+    <input type="radio"
+           [(ngModel)]="radioSelected"
+           [name]="'list_name'"
+           [value]="item.value"
+           (change)="onItemChange(item)"/>
+    {{item.name}}
+</ng-container>

@@ -33,7 +33,7 @@ export class AppComponent {
 
   ngAfterViewInit() {
     const bottomnav = document.querySelector('.bottom-nav')  as HTMLDivElement;
-    console.log(bottomnav.offsetHeight);
+    // console.log(bottomnav.offsetHeight);
     // this.contentHeight = this.elementView.nativeElement.offsetHeight;
   }
 

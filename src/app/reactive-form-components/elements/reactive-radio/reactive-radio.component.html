@@ -1,0 +1,5 @@
+<div class="form-group">
+    <label [for]="fieldId" class="label text-muted"> {{label}} </label>
+    <ng-content></ng-content>
+    <app-reactive-validation [validationErrors]="validationErrors"></app-reactive-validation>
+</div>
