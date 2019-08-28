@@ -3,6 +3,7 @@ import { Renderer2, Inject } from '@angular/core';
 
 import {WINDOW} from './services/window.service';
 import {DOCUMENT} from '@angular/common';
+import {ThemeService} from "./services/theme.service";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,7 +13,8 @@ import {DOCUMENT} from '@angular/common';
 export class AppComponent {
   constructor(
     @Inject(DOCUMENT) private document: Document,
-    @Inject(WINDOW) private window: Window
+    @Inject(WINDOW) private window: Window,
+    @Inject(ThemeService) private ThemeService: ThemeService,
   ) { }
   @ViewChild('bottom-nav', {static: false}) elementView: ElementRef;
 
@@ -38,7 +40,7 @@ export class AppComponent {
   }
 
     setTheme(theme: string) {
-        window['switchStyle'](theme);
+        window['switchTheme'](theme);
         localStorage.setItem('myapp-theme', theme); // same key as in 'load-style.js'
     }
 }

@@ -16,6 +16,7 @@ import {ReactiveValidationComponent} from "./reactive-form-components/elements/r
 import {ReactiveInputComponent} from "./reactive-form-components/elements/reactive-input/reactive-input.component";
 import { ReactiveSelectComponent } from './reactive-form-components/elements/reactive-select/reactive-select.component';
 import { ReactiveRadioComponent } from './reactive-form-components/elements/reactive-radio/reactive-radio.component';
+import {ThemeService} from "./services/theme.service";
 
 
 @NgModule({
@@ -38,7 +39,10 @@ import { ReactiveRadioComponent } from './reactive-form-components/elements/reac
       ReactiveFormsModule,
       FormsModule,
   ],
-  providers: [WINDOW_PROVIDERS],
+  providers: [
+      WINDOW_PROVIDERS,
+    ThemeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

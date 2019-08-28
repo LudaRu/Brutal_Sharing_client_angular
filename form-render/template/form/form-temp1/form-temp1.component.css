@@ -1,0 +1,18 @@
+.afterLine:after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  bottom: -5px;
+  width: 100%;
+  left: 0.5em;
+  margin-right: -100%;
+  background: #ced4da;
+}
+
+._control-label {
+  color: #757675;
+  font-weight: normal;
+  overflow: hidden;
+}

@@ -1,6 +1,6 @@
 <div class="form-group">
 
-  <label [for]="fieldId" class="label text-muted"> {{label}} </label>
+  <label *ngIf="label" [for]="fieldId" class="label text-muted"> {{label}} </label>
   <input [formControl]="control"
          [id]="fieldId"
          autocomplete="off"

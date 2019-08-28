@@ -50,4 +50,10 @@ export class ProfileComponent implements OnInit {
         }
     }
 
+    switchTheme(theme)
+    {
+        window['switchTheme'](theme);
+        localStorage.setItem('themeName', theme);
+    }
+
 }
