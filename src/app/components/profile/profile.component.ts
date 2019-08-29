@@ -29,11 +29,14 @@ export class ProfileComponent implements OnInit {
 
     currentRate = 8;
 
+    thmeName: string;
+
   constructor(
       private formBuilder: FormBuilder,
     private validationService: ValidationService,
       ) {
 
+      this.thmeName = window['getTheme']();
   }
 
   ngOnInit() {
@@ -53,6 +56,7 @@ export class ProfileComponent implements OnInit {
     switchTheme(theme)
     {
         window['switchTheme'](theme);
+        this.thmeName = theme;
         localStorage.setItem('themeName', theme);
     }
 

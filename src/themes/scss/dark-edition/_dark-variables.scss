@@ -41,6 +41,7 @@ $header-success-gradient:         linear-gradient(60deg, $success-dark, $success
 $header-danger-gradient:          linear-gradient(60deg, $danger-dark, $danger-light);
 $header-info-gradient:            linear-gradient(60deg, $info-dark, $info-light);
 $header-purple-gradient:          linear-gradient(60deg, $purple-700, $purple-light);
+$header-primary-gradient:          linear-gradient(60deg, $indigo-700, $indigo-500);
 
 
 // alerts gradient
@@ -74,7 +75,7 @@ $right-position:                  $border-badge-notification !default;
 
 // card color
 $card-color:                      #202940 !default;
-$card-category-color:             #8b92a9 !default;
+$card-category-color:             $blue-grey-100 !default;
 $card-body-color:                 $card-category-color !default;
 $card-list-item-color:            $card-category-color !default;
 $card-title-color:                #606477 !default;
@@ -116,10 +117,10 @@ $tooltips-background-color:       $tooltips-arrow-color !default;
 $tooltips-text-color:             $card-category-color !default;
 
 // buttons color
-$dark-btn-default-bg:               #9095a2 !default;
+$dark-btn-default-bg:               $blue-grey-100 !default;
 $dark-btn-default-border-color:     $dark-btn-default-bg !default;
 $dark-btn-white-color:              $dark-btn-default-bg !default;
-$dark-btn-primary-bg:               $purple-light !default;
+$dark-btn-primary-bg:               $indigo-500 !default;
 $dark-btn-primary-border-color:     $dark-btn-primary-bg !default;
 $dark-btn-warning-bg:               $warning-dark !default;
 $dark-btn-warning-border-color:     $dark-btn-warning-bg !default;

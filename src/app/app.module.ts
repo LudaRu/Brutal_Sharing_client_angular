@@ -17,6 +17,7 @@ import {ReactiveInputComponent} from "./reactive-form-components/elements/reacti
 import { ReactiveSelectComponent } from './reactive-form-components/elements/reactive-select/reactive-select.component';
 import { ReactiveRadioComponent } from './reactive-form-components/elements/reactive-radio/reactive-radio.component';
 import {ThemeService} from "./services/theme.service";
+import { CatalogComponent } from './components/catalog/catalog.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import {ThemeService} from "./services/theme.service";
     FooterComponent,
     ReactiveSelectComponent,
     ReactiveRadioComponent,
+    CatalogComponent,
   ],
   imports: [
       NgbModule,

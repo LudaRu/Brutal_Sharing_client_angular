@@ -8,6 +8,7 @@
   color: $gray-dark;
   background: $white-color;
   width: 100%;
+  overflow: hidden;
 
     .card-category:not([class*="text-"]) {
         color: $gray-color;
@@ -167,7 +168,7 @@
     &.bg-primary,
     &.card-rotate.bg-primary .front,
     &.card-rotate.bg-primary .back{
-      background: linear-gradient(60deg, $purple-400, $purple-600);
+      background: linear-gradient(60deg, $blue-grey-800, $blue-grey-900);
     }
     .card-header-info .card-icon,
     .card-header-info .card-text,

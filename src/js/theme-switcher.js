@@ -1,7 +1,7 @@
 switchTheme(localStorage.getItem('themeName')); // same key as in app.component.ts
 
 function getTheme() {
-    localStorage.getItem('themeName')
+    return localStorage.getItem('themeName')
 }
 
 function switchTheme(theme) {

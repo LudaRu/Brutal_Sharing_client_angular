@@ -41,8 +41,7 @@
               }
             ],
             "scripts": [
-              "src/js/style-switcher.js",
-              "src/js/style-local-storage.js"
+              "src/js/theme-switcher.js"
             ]
           },
           "configurations": {
@@ -120,8 +119,7 @@
               }
             ],
             "scripts": [
-              "src/js/style-switcher.js",
-              "src/js/style-local-storage.js"
+              "src/js/theme-switcher.js"
             ]
           }
         },

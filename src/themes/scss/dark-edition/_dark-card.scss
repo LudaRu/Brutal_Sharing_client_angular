@@ -47,7 +47,7 @@
   @include dark-header-gradient('success', $header-success-gradient);
   @include dark-header-gradient('danger', $header-danger-gradient);
   @include dark-header-gradient('info', $header-info-gradient);
-  @include dark-header-gradient('primary', $header-purple-gradient);
+  @include dark-header-gradient('primary', $header-primary-gradient);
 }
 
 // Card Footer Links Color

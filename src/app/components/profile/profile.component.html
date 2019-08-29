@@ -15,16 +15,20 @@
 
     <div class="col-12">
         <div class="card card-stats">
-            <div class="card-body">
-                <p>Тема</p>
+            <div class="card-header card-header-primary">
+                <h3 class="card-title">Тема</h3>
             </div>
             <div class="card-footer">
                 <div class="row">
-                    <div class="col-6">
-                        <div class="btn btn-primary" (click)="switchTheme('dark-edition')">dark</div>
+                    <div class="col-6" *ngIf="thmeName !== 'dark-edition'">
+                        <div class="btn btn-primary"
+                             (click)="switchTheme('dark-edition')"
+                        >dark</div>
                     </div>
-                    <div class="col-6">
-                        <div class="btn btn-primary" (click)="switchTheme('light')">light</div>
+                    <div class="col-6" *ngIf="thmeName !== 'light'">
+                        <div class="btn btn-primary"
+                             (click)="switchTheme('light')"
+                        >light</div>
                     </div>
                 </div>
                 <!--<form [formGroup]="feedbackForm">-->
