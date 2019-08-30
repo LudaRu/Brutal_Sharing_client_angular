@@ -8,7 +8,6 @@
   color: $gray-dark;
   background: $white-color;
   width: 100%;
-  overflow: hidden;
 
     .card-category:not([class*="text-"]) {
         color: $gray-color;
@@ -363,7 +362,7 @@
     z-index: 3 !important;
 
     .card-title{
-      margin-bottom: 3px;
+      //margin-bottom: 3px;
     }
 
     .card-category{
@@ -498,7 +497,7 @@
       &:not(.card-header-icon):not(.card-header-text):not(.card-header-image){
         border-radius: $border-radius-base;
         margin-top: -20px;
-        padding: 15px;
+        padding: 10px;
       }
 
       .card-icon,

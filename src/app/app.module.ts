@@ -18,7 +18,9 @@ import { ReactiveSelectComponent } from './reactive-form-components/elements/rea
 import { ReactiveRadioComponent } from './reactive-form-components/elements/reactive-radio/reactive-radio.component';
 import {ThemeService} from "./services/theme.service";
 import { CatalogComponent } from './components/catalog/catalog.component';
-
+import { ItemComponent } from './components/catalog/item/item.component';
+import { PageComponent } from './components/catalog/page/page.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { CatalogComponent } from './components/catalog/catalog.component';
     ReactiveSelectComponent,
     ReactiveRadioComponent,
     CatalogComponent,
+    ItemComponent,
+    PageComponent,
   ],
   imports: [
       NgbModule,
@@ -40,6 +44,7 @@ import { CatalogComponent } from './components/catalog/catalog.component';
     HttpClientModule,
       ReactiveFormsModule,
       FormsModule,
+      ScrollingModule,
   ],
   providers: [
       WINDOW_PROVIDERS,
