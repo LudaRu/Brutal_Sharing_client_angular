@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card oh mb-0 mt-2">
+                <div class="wrapper_img bg-1">
+                    <img src="{{item.img}}">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 mt-2 mb-2">
+            <div class="alert alert-info m-0 mt-2" data-notify="container">
+                <span data-notify="message">{{item.name}}</span>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="card mb-0 mt-2">
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-12">
+                            <div>Теги:
+                                <ng-container *ngFor="let tag of item.tags">
+                                    <a class="text-info pr-2">#{{tag}}</a>
+                                </ng-container>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary">Взять</button>
+                            <button class="btn btn-primary">Отдать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-12">
+            <div class="card mb-0 mt-2">
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-12">
+                            <span class="h5">Описание</span>
+                            <p>{{item.discription}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

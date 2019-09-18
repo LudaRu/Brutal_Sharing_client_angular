@@ -21,6 +21,7 @@ import { CatalogComponent } from './components/catalog/catalog.component';
 import { ItemComponent } from './components/catalog/item/item.component';
 import { PageComponent } from './components/catalog/page/page.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { ThingComponent } from './components/thing/thing.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     CatalogComponent,
     ItemComponent,
     PageComponent,
+    ThingComponent,
   ],
   imports: [
       NgbModule,
