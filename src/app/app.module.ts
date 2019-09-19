@@ -22,6 +22,7 @@ import { ItemComponent } from './components/catalog/item/item.component';
 import { PageComponent } from './components/catalog/page/page.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { ThingComponent } from './components/thing/thing.component';
+import { EditComponent } from './components/thing/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ThingComponent } from './components/thing/thing.component';
     ItemComponent,
     PageComponent,
     ThingComponent,
+    EditComponent,
   ],
   imports: [
       NgbModule,

@@ -1,10 +1,14 @@
-<div class="form-group">
+<div class="form-group" *ngIf="!textMode">
+    <input [formControl]="control"
+           [id]="fieldId"
+           placeholder="{{label}}"
+           autocomplete="off"
+           class="form-control"/>
+    <app-reactive-validation [validationErrors]="validationErrors"></app-reactive-validation>
+</div>
 
-  <label *ngIf="label" [for]="fieldId" class="label text-muted"> {{label}} </label>
-  <input [formControl]="control"
-         [id]="fieldId"
-         autocomplete="off"
-         class="form-control"/>
-  <app-reactive-validation [validationErrors]="validationErrors"></app-reactive-validation>
 
+<div class="form-group" *ngIf="textMode">
+    <label *ngIf="label" [for]="fieldId" class="label text-muted"> {{label}} </label>
+    <p>{{control.value}}</p>
 </div>

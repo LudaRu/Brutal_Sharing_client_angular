@@ -9,12 +9,14 @@ export abstract class AbstractReactiveComponent implements OnInit, DoCheck {
 
   @Input() fieldId: string | null = null;
   @Input() control: AbstractControl | null = null;
+  @Input() textMode: boolean = false;
+  @Input() label: string = null;
 
-  label: string = null;
   validationErrors: object = null;
 
   ngOnInit() {
-    this.label = LABEL_LIST[this.fieldId] ? LABEL_LIST[this.fieldId] : '';
+    if (!this.label)
+        this.label = LABEL_LIST[this.fieldId] ? LABEL_LIST[this.fieldId] : '';
   }
 
   ngDoCheck() {
